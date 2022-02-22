@@ -1,10 +1,10 @@
 import { Route, Routes as RoutesImport } from "react-router-dom";
-import MintPage from "components/pages/MintPage";
+import VotePage from "components/pages/VotePage";
 
 export default function Routes(): JSX.Element {
   return (
     <RoutesImport>
-      <Route path="/mint" element={<MintPage />} />
+      <Route path="/vote" element={<VotePage />} />
     </RoutesImport>
   );
 }
