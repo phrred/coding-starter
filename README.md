@@ -1,6 +1,6 @@
-# cra-starter
+# coding-starter
 
-Simple starter create-react-app repo
+Starter repo to use for coding challenge.
 
 ## Getting started
 
@@ -9,7 +9,3 @@ Simple starter create-react-app repo
     - If `yarn` complains about your Node version, [install nvm](https://github.com/nvm-sh/nvm), then run `nvm use 14.17.0`
 3. Run `yarn tsc && yarn eslint` to make sure TypeScript and ESLint are working
 4. Run `yarn start` to start the development server
-
-## Development
-
-Add new pages to `src/routes/Routes.tsx`
