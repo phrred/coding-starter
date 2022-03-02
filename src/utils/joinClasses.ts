@@ -1,10 +1,8 @@
-import { MaybeUndef } from "types/UtilityTypes";
-
 /**
  * Joins the passed-in CSS classes with a space.
  */
 export default function joinClasses(
-  ...cssClasses: Array<MaybeUndef<string>>
+  ...cssClasses: Array<string | null | undefined>
 ): string {
   return cssClasses.filter((className) => className != null).join(" ");
 }

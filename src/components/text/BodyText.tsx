@@ -1,4 +1,3 @@
-import ColorClass from "types/enums/ColorClass";
 import FontClass from "types/enums/FontClass";
 import joinClasses from "utils/joinClasses";
 
@@ -9,7 +8,6 @@ export type Props = {
     | JSX.Element
     | Array<JSX.Element | string | number | boolean>;
   className?: string;
-  colorClass?: ColorClass;
   display?: string;
   fontClass: FontClass;
   textAlign?: "center" | "left" | "right";
@@ -19,13 +17,12 @@ export type Props = {
 export default function BodyText({
   children,
   className,
-  colorClass,
   display,
   fontClass,
   textAlign,
   textTransform,
 }: Props): JSX.Element {
-  const classNameJoined = joinClasses(fontClass, className, colorClass);
+  const classNameJoined = joinClasses(fontClass, className);
 
   const style = {
     ...(textAlign != null ? { textAlign } : {}),

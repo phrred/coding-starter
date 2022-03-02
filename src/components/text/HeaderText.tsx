@@ -1,7 +1,6 @@
-import ColorClass from "types/enums/ColorClass";
 import FontClass from "types/enums/FontClass";
-import joinClasses from "utils/joinClasses";
 import styles from "css/text/HeaderText.module.css";
+import joinClasses from "utils/joinClasses";
 
 export type Props = {
   children:
@@ -10,7 +9,6 @@ export type Props = {
     | Array<JSX.Element | string | number>
     | number;
   className?: string;
-  colorClass?: ColorClass;
   fontClass: FontClass;
   textAlign?: "center" | "left" | "right";
   textTransform?: "none" | "uppercase";
@@ -19,17 +17,11 @@ export type Props = {
 export default function HeaderText({
   children,
   className,
-  colorClass,
   fontClass,
   textAlign,
   textTransform,
 }: Props): JSX.Element {
-  const classNameJoined = joinClasses(
-    fontClass,
-    styles.header,
-    className,
-    colorClass
-  );
+  const classNameJoined = joinClasses(fontClass, styles.header, className);
 
   const style = {
     ...(textAlign != null ? { textAlign } : {}),
