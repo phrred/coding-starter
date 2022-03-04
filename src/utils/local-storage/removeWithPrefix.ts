@@ -1,8 +1,3 @@
-import LocalStoragePrefix from "types/enums/LocalStoragePrefix";
-
-export default function removeWithPrefix(
-  prefix: LocalStoragePrefix,
-  key: string
-) {
+export default function removeWithPrefix(prefix: string, key: string) {
   localStorage.removeItem(`${prefix}-${key}`);
 }

@@ -1,7 +1,5 @@
-import LocalStoragePrefix from "types/enums/LocalStoragePrefix";
-
 export default function setWithPrefix(
-  prefix: LocalStoragePrefix,
+  prefix: string,
   key: string,
   value: string
 ) {

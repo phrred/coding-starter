@@ -1,13 +1,13 @@
 import Body1 from "components/text/Body1";
 import Body1Bold from "components/text/Body1Bold";
 import Header1 from "components/text/Header1";
-import EXAMPLE_SUBMISSIONS from "constants/ExampleSubmissions";
+import EXAMPLE_SUBMISSIONS, { Submission } from "constants/ExampleSubmissions";
 import styles from "css/pages/VotePage.module.css";
 
 export default function VotePage(): JSX.Element {
-  const randomExample =
+  const randomExample: Submission =
     EXAMPLE_SUBMISSIONS[Math.floor(Math.random() * EXAMPLE_SUBMISSIONS.length)];
-  console.log(JSON.stringify(randomExample, null, 2));
+  console.log(randomExample);
 
   return (
     <div className={styles.container}>

@@ -1,4 +1,14 @@
-const EXAMPLE_SUBMISSIONS = JSON.parse(`
+export type Submission = {
+  id: string;
+  name: string;
+  userFullname: string;
+  assets: {
+    contentType: string;
+    src: string;
+  }[];
+};
+
+const EXAMPLE_SUBMISSIONS: Submission[] = JSON.parse(`
 [
   {
      "id":"submission_0",
