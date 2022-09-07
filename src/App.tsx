@@ -2,21 +2,20 @@ import "css/global/Global.css";
 
 import { Route, Routes as RoutesImport, BrowserRouter } from "react-router-dom";
 import EXAMPLE_SUBMISSIONS, { Submission } from "ExampleSubmissions";
-import styles from "css/pages/VotePage.module.css";
+import styles from "css/App.module.css";
 
 function VotePage(): JSX.Element {
   const randomExample: Submission =
     EXAMPLE_SUBMISSIONS[Math.floor(Math.random() * EXAMPLE_SUBMISSIONS.length)];
   console.log(randomExample);
 
-  // If desired, utility fonts have been pre-defined in FontClasses.css
   return (
     <div className={styles.container}>
       <div className={styles.example}>
         <h1>Welcome!</h1>
         <ul>
           <li>
-            You&apos;re currently looking at <strong>VotePage.tsx</strong>
+            You&apos;re currently looking at <strong>App.tsx</strong>
           </li>
           <li>
             Local storage helpers have been defined for your convenience under{" "}

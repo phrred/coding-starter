@@ -1,3 +1,3 @@
-export default function removeWithPrefix(key: string) {
+export default function remove(key: string) {
   localStorage.removeItem(`${key}`);
 }
